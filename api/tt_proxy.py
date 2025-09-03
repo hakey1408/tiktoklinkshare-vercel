@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
 import requests
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, origins=["http://localhost", "https://hakey1408.github.io"])  # Restrict CORS to specific origins
 
 @app.route('/fetch-real-ttlink')
 def fetch_real_ttlink():
