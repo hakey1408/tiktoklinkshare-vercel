@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/tt_proxy.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/fetch-real-ttlink",
+      "dest": "api/tt_proxy.py"
+    }
+  ]
+}
+
