@@ -23,5 +23,5 @@ def fetch_real_ttlink():
 # Vercel expects a handler called 'app'
 handler = app
 # This is for local debug on intellij
-if __name__ == "__main__":
-    app.run(debug=True)
+#if __name__ == "__main__":
+#    app.run(debug=True)
