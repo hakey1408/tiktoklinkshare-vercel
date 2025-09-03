@@ -20,9 +20,6 @@ def fetch_real_ttlink():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-# Vercel expects a handler called 'app'
-# handler = app
-# The Flask app instance 'app' is already defined at the global scope for Vercel
 # This is for local debug on intellij
 #if __name__ == "__main__":
 #    app.run(debug=True)
