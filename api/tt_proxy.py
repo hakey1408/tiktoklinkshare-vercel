@@ -4,7 +4,8 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:63342", "https://hakey1408.github.io"])  # Restrict CORS to specific origins
+#CORS(app, origins=["http://localhost:63342", "https://hakey1408.github.io"])  # Restrict CORS to specific origins
+CORS(app, origins=["*"])  # Restrict CORS to specific origins
 
 API_KEY = os.environ.get("API_KEY")  # Set this in Vercel environment variables
 ALLOWED_REFERERS = ["https://hakey1408.github.io"]
@@ -13,6 +14,7 @@ ALLOWED_REFERERS = ["https://hakey1408.github.io"]
 def restrict_to_fetch_real_ttlink():
     if request.path != '/fetch-real-ttlink':
         return jsonify({'error': 'Unauthorized'}), 401
+    return None
 
 @app.route('/fetch-real-ttlink')
 def fetch_real_ttlink():
