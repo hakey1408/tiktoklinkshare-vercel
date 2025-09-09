@@ -3,7 +3,7 @@ import requests
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, origins=["https://hakey1408.github.io"])  # Restrict CORS to specific origins
+CORS(app, origins=["http://localhost:63342", "https://hakey1408.github.io"])  # Restrict CORS to specific origins
 
 ALLOWED_REFERERS = ["https://hakey1408.github.io"]
 
