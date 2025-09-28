@@ -17,8 +17,8 @@ def restrict_to_fetch_real_ttlink():
 def fetch_real_ttlink():
     # Check Referer header
     referer = request.headers.get("Referer", "")
-    if not any(referer.startswith(r) for r in ALLOWED_REFERERS):
-        return jsonify({'error': 'Forbidden'}), 403
+    #if not any(referer.startswith(r) for r in ALLOWED_REFERERS):
+    #    return jsonify({'error': 'Forbidden'}), 403
     url = request.args.get('url')
     if not url:
         return jsonify({'error': 'Missing url parameter'}), 400
